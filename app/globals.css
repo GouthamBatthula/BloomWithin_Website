@@ -1,0 +1,233 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Manrope:wght@400;500;600;700&display=swap');
+
+@import "tailwindcss";
+
+@source "./";
+@source "../components";
+
+/* =================================
+   BLOOMWITHIN BRAND DESIGN SYSTEM
+================================= */
+
+:root {
+  /* Main brand colors */
+  --orange: #F57E1E;
+  --pink: #F52380;
+
+  /* Background colors */
+  --cream: #FFF9F4;
+  --soft-pink: #FFE5EF;
+  --white: #FFFFFF;
+
+  /* Typography */
+  --ink: #241A20;
+  --muted: #76656D;
+
+  /* UI colors */
+  --border: #F2D8DF;
+
+  /* Legacy compatibility */
+  --sage: var(--pink);
+  --pale: var(--soft-pink);
+  --clay: var(--orange);
+}
+
+/* =================================
+   GLOBAL STYLES
+================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: Manrope, Arial, sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: Fraunces, Georgia, serif;
+  font-weight: 500;
+  letter-spacing: -.04em;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.shell {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 24px;
+}
+
+/* =================================
+   LABELS
+================================= */
+
+.eyebrow {
+  font: 500 11px 'DM Mono', monospace;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--pink);
+}
+
+/* =================================
+   BUTTONS
+================================= */
+
+
+
+.button,
+.button-light {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 14px 24px !important;
+
+  background: rgba(255, 255, 255, 0.88) !important;
+  color: #241A20 !important;
+
+  border: 3px solid #ff006f !important;
+  border-radius: 999px !important;
+
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+
+  box-shadow:
+    0 4px 15px rgba(36, 26, 32, 0.12),
+    inset 0 1px 2px rgba(255, 255, 255, 0.9);
+
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: none !important;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.button:hover,
+.button-light:hover {
+  background: #ff590095 !important;
+  border-color: #ff006f !important;
+  color: #241A20 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(36, 26, 32, 0.16);
+}
+
+
+
+/* =================================
+   DIARY PRODUCT PLACEHOLDER
+================================= */
+
+.paper {
+  background: linear-gradient(
+    135deg,
+    #FFE5EF,
+    #FFF0DC,
+    #FFD3E5
+  );
+  position: relative;
+  overflow: hidden;
+}
+
+.paper::before {
+  content: 'Bloom Diary\A Product image needed';
+  white-space: pre;
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  font: 500 12px 'DM Mono', monospace;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--pink);
+  opacity: .9;
+  z-index: 1;
+}
+
+.paper::after {
+  content: '';
+  width: 58%;
+  height: 70%;
+  position: absolute;
+  left: 21%;
+  top: 15%;
+  border: 1px solid #F52380;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent 0 30px,
+    #F7B2CE 31px
+  );
+  box-shadow: 14px 15px 0 #F57E1E;
+  transform: rotate(-5deg);
+}
+
+/* =================================
+   FORM FIELDS
+================================= */
+
+.field {
+  width: 100%;
+  border: 1px solid var(--border);
+  padding: 13px;
+  background: var(--white);
+  color: var(--ink);
+  outline: none;
+  font: inherit;
+}
+
+.field:focus {
+  border-color: var(--pink);
+  box-shadow: 0 0 0 3px var(--soft-pink);
+}
+
+
+/* Grainy Orange × Pink Gradient */
+
+.grainy-gradient {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      ellipse at 15% 20%,
+      rgba(255, 190, 100, 0.45),
+      transparent 45%
+    ),
+    radial-gradient(
+      ellipse at 85% 80%,
+      rgba(255, 80, 160, 0.4),
+      transparent 45%
+    ),
+    linear-gradient(
+      120deg,
+      #F57E1E 0%,
+      #F34C63 48%,
+      #F52380 100%
+    );
+}
+
+.grainy-gradient::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.20;
+
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.65'/%3E%3C/svg%3E");
+
+  background-size: 180px 180px;
+}
