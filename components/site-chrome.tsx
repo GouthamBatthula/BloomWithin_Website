@@ -1,3 +1,4 @@
+import Image from "next/image";
 
 import Link from "next/link";
 import { ArrowUpRight, Instagram, MessageCircle } from "lucide-react";
@@ -8,9 +9,17 @@ export function Header() {
       <div className="shell flex h-18 items-center justify-between py-4">
         <Link
           href="/"
-          className="font-[Fraunces] text-2xl tracking-[-.06em]"
+          className="flex items-center gap-3 font-[Fraunces] text-2xl tracking-[-.06em]"
         >
-          BloomWithin
+          <Image
+            src="/images/bloomwithin-logo.png"
+            alt="BloomWithin logo"
+            width={42}
+            height={42}
+            className="h-10 w-10 object-contain"
+            priority
+          />
+          <span>BloomWithin</span>
         </Link>
 
         <nav className="hidden gap-7 text-sm md:flex">
