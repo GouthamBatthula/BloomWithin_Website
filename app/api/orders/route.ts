@@ -24,7 +24,10 @@ export async function POST(request: NextRequest) {
   const db = supabaseAdmin();
   const { data: saved, error } = await db.from("orders").insert({
     order_number: orderNumber(), idempotency_key: data.idempotencyKey, customer_name: data.customerName,
-    phone: data.phone, address_line1: data.addressLine1, address_line2: data.addressLine2 || null,
+    phone: data.phone,
+    email: data.email,
+    address_line1: data.addressLine1,
+    address_line2: data.addressLine2 || null,
     city: data.city, state: data.state, postal_code: data.postalCode, quantity: data.quantity,
     unit_price_paise: unitPricePaise, total_paise: totalPaise, status: "awaiting_whatsapp"
   }).select("order_number").single();

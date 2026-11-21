@@ -5,7 +5,7 @@ import { ArrowUpRight, Instagram, MessageCircle } from "lucide-react";
 
 export function Header() {
   return (
-    <header className="border-b border-[var(--border)]">
+    <header className="bg-white">
       <div className="shell flex h-18 items-center justify-between py-4">
         <Link
           href="/"
@@ -28,7 +28,10 @@ export function Header() {
           <a href="/#faq" className="hover:text-[var(--pink)]">FAQ</a>
         </nav>
 
-        <Link className="button !px-4 !py-2.5 text-xs" href="/checkout">
+        <Link
+          className="button !px-4 !py-2.5 text-xs"
+          href="/products/bloom-diary"
+        >
           Buy now <ArrowUpRight size={15} />
         </Link>
       </div>
