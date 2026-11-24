@@ -5,7 +5,7 @@ import { ArrowUpRight, Instagram, MessageCircle } from "lucide-react";
 
 export function Header() {
   return (
-    <header className="border-b border-[var(--border)]">
+    <header className="bg-white">
       <div className="shell flex h-18 items-center justify-between py-4">
         <Link
           href="/"
@@ -28,7 +28,10 @@ export function Header() {
           <a href="/#faq" className="hover:text-[var(--pink)]">FAQ</a>
         </nav>
 
-        <Link className="button !px-4 !py-2.5 text-xs" href="/checkout">
+        <Link
+          className="button !px-4 !py-2.5 text-xs"
+          href="/products/bloom-diary"
+        >
           Buy now <ArrowUpRight size={15} />
         </Link>
       </div>
@@ -61,12 +64,27 @@ export function Footer() {
 
         <div>
           <p className="eyebrow !text-[var(--pink)]">Contact</p>
-          <p className="mt-4 text-sm leading-6 text-white/85">
-            Business contact information will be added before launch.
-          </p>
-          <div className="mt-4 flex gap-3 text-[var(--pink)]">
-            <Instagram size={18} />
-            <MessageCircle size={18} />
+          
+          <div className="mt-4 flex gap-4 text-[var(--pink)]">
+            <a
+              href="https://www.instagram.com/bloomwithin.x/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Follow BloomWithin on Instagram"
+              className="transition hover:text-white"
+            >
+              <Instagram size={20} />
+            </a>
+
+            <a
+              href="https://wa.me/91XXXXXXXXXX"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Chat with BloomWithin on WhatsApp"
+              className="transition hover:text-white"
+            >
+              <MessageCircle size={20} />
+            </a>
           </div>
         </div>
       </div>

@@ -1,4 +1,4 @@
-
+import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowDown,
@@ -33,15 +33,15 @@ export default function Home() {
               Make room for what’s blooming within.
             </h1>
 
-            <p className="mt-6 max-w-md text-base leading-7 text-[var(--muted)]">
+            <p className="mt-6 max-w-md text-base leading-7 text-black">
               Bloom Diary is a considered home for your quiet thoughts,
               everyday notes, and future selves.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
-              <Link href="/checkout" className="button">
+              {/* <Link href="/checkout" className="button">
                 Buy Bloom Diary <ArrowUpRight size={16} />
-              </Link>
+              </Link> */}
 
               <a href="#story" className="button button-light">
                 Discover the diary <ArrowDown size={16} />
@@ -55,10 +55,18 @@ export default function Home() {
             </p>
           </div>
 
-          <div
-            className="paper mx-auto h-[420px] w-full max-w-[490px] md:h-[530px]"
-            aria-label="Bloom Diary product image placeholder"
-          />
+          
+          <div className="relative mx-auto aspect-[4/5] w-full max-w-[490px] overflow-hidden rounded-2xl">
+            <Image
+              src="/products/bloom-diary/cover.png"
+              alt="BloomWithin Bloom Diary"
+              fill
+              priority
+              sizes="(max-width: 768px) 100vw, 490px"
+              className="object-cover"
+            />
+          </div>
+
         </section>
 
         {/* STORY SECTION */}
@@ -84,43 +92,91 @@ export default function Home() {
         </section>
 
         {/* PRODUCT DETAILS */}
-        <section
-          id="details"
-          className="shell grid gap-12 py-20 md:grid-cols-2"
-        >
-          <div className="paper order-2 h-[360px] md:order-1" />
+        
+{/* BLOOM DIARY PRODUCT SHOWCASE */}
+<section id="details" className="shell py-24">
+  <div className="grid items-center gap-14 md:grid-cols-2">
 
-          <div className="md:py-8">
-            <p className="eyebrow">Considered details</p>
+    {/* PRODUCT IMAGE GALLERY */}
+    <div className="grid grid-cols-2 gap-3">
+      <div className="col-span-2 overflow-hidden rounded-2xl bg-[var(--soft-pink)]">
+        <img
+          src="/products/bloom-diary/Front.png"
+          alt="Bloom Diary cover"
+          className="h-[420px] w-full object-cover"
+        />
+      </div>
 
-            <h2 className="mt-3 text-4xl">
-              The Bloom Diary
-            </h2>
+      <div className="overflow-hidden rounded-xl">
+        <img
+          src="/products/bloom-diary/Show.png"
+          alt="Bloom Diary lifestyle"
+          className="h-52 w-full object-cover"
+        />
+      </div>
 
-            <p className="mt-5 max-w-md leading-7 text-[var(--muted)]">
-              {PRODUCT.description}
-            </p>
+      <div className="overflow-hidden rounded-xl">
+        <img
+          src="/products/bloom-diary/Show2.png"
+          alt="Bloom Diary details"
+          className="h-52 w-full object-cover"
+        />
+      </div>
+    </div>
 
-            <ul className="mt-7 grid gap-4">
-              {details.map((item) => (
-                <li
-                  className="flex gap-3 text-sm"
-                  key={item}
-                >
-                  <Check
-                    className="mt-.5 shrink-0 text-[var(--orange)]"
-                    size={17}
-                  />
-                  {item}
-                </li>
-              ))}
-            </ul>
+    {/* PRODUCT INFORMATION */}
+    <div className="md:py-8">
+      <p className="eyebrow">A little space for yourself</p>
 
-            <Link href="/checkout" className="button mt-8">
-              Order now <ArrowUpRight size={16} />
-            </Link>
-          </div>
-        </section>
+      <h2 className="mt-5 text-5xl leading-tight">
+        Meet your new favourite diary.
+      </h2>
+
+      <p className="mt-6 leading-8 text-[var(--muted)]">
+        Bloom Diary is a considered home for your quiet thoughts,
+        everyday notes, and future selves. A space to pause,
+        reflect and let your thoughts bloom.
+      </p>
+
+      <div className="my-8 border-y border-[var(--border)] py-6">
+        <p className="text-sm text-[var(--muted)]">
+          BloomWithin · Bloom Diary
+        </p>
+
+        <div className="flex items-center gap-3">
+          <span className="text-3xl font-semibold text-black">
+            ₹1,299
+          </span>
+
+          <span className="text-base text-[var(--muted)] line-through">
+            ₹1,499
+          </span>
+
+          <span className="rounded-full bg-[var(--soft-pink)] px-3 py-1 text-xs font-semibold text-[var(--pink)]">
+            13% OFF
+          </span>
+</div>
+
+        <p className="mt-2 text-sm text-[var(--muted)]">
+          Delivery across India
+        </p>
+      </div>
+
+      <Link
+        href="/products/bloom-diary"
+        className="button w-full md:w-auto"
+      >
+        Get your Bloom Diary <ArrowUpRight size={17} />
+      </Link>
+
+      <p className="mt-4 text-xs text-[var(--muted)]">
+        A little reminder to make room for yourself.
+      </p>
+    </div>
+
+  </div>
+</section>
+
 
         {/* DELIVERY BENEFITS */}
         <section className="border-y border-[var(--border)] bg-white py-16">

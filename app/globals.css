@@ -201,22 +201,19 @@ a {
   overflow: hidden;
 
   background:
-    radial-gradient(
-      ellipse at 15% 20%,
-      rgba(255, 190, 100, 0.45),
-      transparent 45%
-    ),
-    radial-gradient(
-      ellipse at 85% 80%,
-      rgba(255, 80, 160, 0.4),
-      transparent 45%
-    ),
-    linear-gradient(
-      120deg,
-      #F57E1E 0%,
-      #F34C63 48%,
-      #F52380 100%
-    );
+  linear-gradient(
+    to bottom,
+    #ffffff 0%,
+    #fffaf8 12%,
+    rgba(255, 255, 255, 0.75) 24%,
+    rgba(255, 255, 255, 0) 48%
+  ),
+  linear-gradient(
+    110deg,
+    #ff963f 0%,
+    #ff704e 45%,
+    #f43f78 100%
+  );
 }
 
 .grainy-gradient::after {
