@@ -64,12 +64,27 @@ export function Footer() {
 
         <div>
           <p className="eyebrow !text-[var(--pink)]">Contact</p>
-          <p className="mt-4 text-sm leading-6 text-white/85">
-            Business contact information will be added before launch.
-          </p>
-          <div className="mt-4 flex gap-3 text-[var(--pink)]">
-            <Instagram size={18} />
-            <MessageCircle size={18} />
+          
+          <div className="mt-4 flex gap-4 text-[var(--pink)]">
+            <a
+              href="https://www.instagram.com/bloomwithin.x/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Follow BloomWithin on Instagram"
+              className="transition hover:text-white"
+            >
+              <Instagram size={20} />
+            </a>
+
+            <a
+              href="https://wa.me/91XXXXXXXXXX"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Chat with BloomWithin on WhatsApp"
+              className="transition hover:text-white"
+            >
+              <MessageCircle size={20} />
+            </a>
           </div>
         </div>
       </div>

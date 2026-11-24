@@ -5,20 +5,25 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const images = [
+  
   {
-    src: "/products/bloom-diary/cover.png",
-    alt: "Bloom Diary front cover",
-  },
-  {
-    src: "/products/bloom-diary/style1.png",
+    src: "/products/bloom-diary/Front.png",
     alt: "Bloom Diary lifestyle",
   },
   {
-    src: "/products/bloom-diary/style2.png",
+    src: "/products/bloom-diary/Front2.png",
     alt: "Bloom Diary product photography",
   },
   {
-    src: "/products/bloom-diary/detail.png",
+    src: "/products/bloom-diary/Back.png",
+    alt: "Bloom Diary close-up details",
+  },
+  {
+    src: "/products/bloom-diary/Show.png",
+    alt: "Bloom Diary close-up details",
+  },
+  {
+    src: "/products/bloom-diary/Show2.png",
     alt: "Bloom Diary close-up details",
   },
 ];

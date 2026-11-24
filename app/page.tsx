@@ -101,7 +101,7 @@ export default function Home() {
     <div className="grid grid-cols-2 gap-3">
       <div className="col-span-2 overflow-hidden rounded-2xl bg-[var(--soft-pink)]">
         <img
-          src="/products/bloom-diary/cover.png"
+          src="/products/bloom-diary/Front.png"
           alt="Bloom Diary cover"
           className="h-[420px] w-full object-cover"
         />
@@ -109,7 +109,7 @@ export default function Home() {
 
       <div className="overflow-hidden rounded-xl">
         <img
-          src="/products/bloom-diary/style1.png"
+          src="/products/bloom-diary/Show.png"
           alt="Bloom Diary lifestyle"
           className="h-52 w-full object-cover"
         />
@@ -117,7 +117,7 @@ export default function Home() {
 
       <div className="overflow-hidden rounded-xl">
         <img
-          src="/products/bloom-diary/style2.png"
+          src="/products/bloom-diary/Show2.png"
           alt="Bloom Diary details"
           className="h-52 w-full object-cover"
         />
